@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/com/github/sergius02/sherlock/">
+    <file>ui/sherlock.glade</file>
+
+    <file>icons/icon_ip.svg</file>
+    <file>icons/icon_address.svg</file>
+    <file>icons/icon_timezone.svg</file>
+    <file>icons/icon_latlong.svg</file>
+    <file>icons/icon_isp.svg</file>
+    <file>icons/icon_as.svg</file>
+    <file>icons/icon_github.svg</file>
+  </gresource>
+</gresources>

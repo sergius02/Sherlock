@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Name
+Comment=Comment
+GenericName=GenericName
+Exec=com.github.sergius02.Sherlock %U
+Icon=com.github.sergius02.Sherlock
+Terminal=false
+Categories=Utility;GTK;Development;
+Keywords=Develop
