@@ -12,9 +12,14 @@ This is application is **still in developing**, currently it only search informa
 
 ![alt](Sherlock.png)
 
-# Install it from source
+> TODO
+>
+> * Search IP section
+> * Internacionalization
+> * Improve and clean the code!
+> * Create installation package
 
-You can of course download and install this app from source.
+# Install it from source
 
 ## Dependencies
 
@@ -43,6 +48,12 @@ meson build --prefix=/usr
 cd build
 ninja && ./Sherlock
 ```
+
+## Credits
+
+* IP-API [https://ip-api.com/](https://ip-api.com/)
+* Icons [https://remixicon.com/](https://remixicon.com/)
+* Visual studio code [https://code.visualstudio.com/](https://code.visualstudio.com/)
 
 ----------
 This is my first Vala application, be gentle 😹️
