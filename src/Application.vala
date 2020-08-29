@@ -17,8 +17,6 @@ public class Application : Gtk.Application {
 
         window.show_all ();
 
-        Sherlock.Window sherlockWindow = new Sherlock.Window(builder);
-
-        sherlockWindow.fillLabels();
+        new Sherlock.Window(builder);
     }
 }

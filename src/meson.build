@@ -7,5 +7,7 @@ sources = files (
     'Application.vala',
     
     'widgets/Window.vala',
+    'widgets/DeviceIPBox.vala',
+    'widgets/SearchIPBox.vala',
     'widgets/HeaderBar.vala'
 )

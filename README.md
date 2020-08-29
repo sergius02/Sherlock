@@ -2,19 +2,12 @@
 
 Sherlock helps you to find information of public IP address, elementary! 🕵️
 
-----------
-
-**Important**
-
-This application is **still in developing**, currently it only search information about your current IP address.
-
-----------
-
 ![alt](Sherlock.png)
+
+![alt](Sherlock2.png)
 
 > TODO
 >
-> * Search IP section
 > * Internacionalization
 > * Improve and clean the code!
 > * Create installation package
