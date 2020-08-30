@@ -8,25 +8,11 @@ public class Sherlock.HTTPRequestHelper {
     private Json.Node root;
 
     /**
-    Send a GET request to the API to obtain the current device IP info
-    */
-    public Sherlock.ResponseObject getDeviceIP () {
-        return generateHTTPRequest ("");
-    }
-
-    /**
-    Send a GET request to the API to obtain all info from the IP
-    */
-    public Sherlock.ResponseObject searchIPInfo (string ip) {
-        return generateHTTPRequest (ip);
-    }
-
-    /**
     Send a request to the API
 
     string ip: IP to search, if IP is empty the API returns the current device IP info
     */
-    private Sherlock.ResponseObject generateHTTPRequest (string ip) {
+    public Sherlock.ResponseObject generateHTTPRequest (string ip) {
         var session = new Soup.Session ();
         var message = new Soup.Message ("GET", this.baseURL + ip);
 
