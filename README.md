@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="data/icons/128/Sherlock.svg" alt="Icon" />
+  <img src="data/icons/128/com.github.sergius02.sherlock.svg" alt="Icon" />
 </p>
 <h1 align="center">Sherlock</h1>
 
