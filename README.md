@@ -1,11 +1,13 @@
-# Sherlock
 
-![alt](data/icons/128/Sherlock.svg)
-
-Sherlock helps you to find information of public IP address, elementary! 🕵️
+<p align="center">
+  <img src="data/icons/128/Sherlock.svg" alt="Icon" />
+</p>
+<h1 align="center">Sherlock</h1>
 
 |![alt](screenshots/Sherlock.png) |![alt](screenshots/Sherlock2.png)|
 |---------------------|---------------------|
+
+Sherlock helps you to find information of public IP address, elementary! 🕵️
 
 ## Dependencies
 
@@ -37,9 +39,10 @@ ninja && ./Sherlock
 
 ## Credits
 
-* IP-API [https://ip-api.com/](https://ip-api.com/)
-* Icons [https://remixicon.com/](https://remixicon.com/)
-* Visual studio code [https://code.visualstudio.com/](https://code.visualstudio.com/)
+* [IP-API](https://ip-api.com/)
+* [REMIXICON](https://remixicon.com/)
+* [Visual studio code](https://code.visualstudio.com/)
+* App icon from [Flaticon](https://www.flaticon.es/)
 
 ----------
 This is my first Vala application, be gentle 😹️
