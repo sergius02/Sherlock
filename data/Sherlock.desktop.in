@@ -1,10 +1,10 @@
 [Desktop Entry]
 Type=Application
-Name=Name
-Comment=Comment
-GenericName=GenericName
-Exec=com.github.sergius02.Sherlock %U
-Icon=com.github.sergius02.Sherlock
+Name=Sherlock
+Comment=Sherlock helps you to find information of public IP address, elementary!
+GenericName=Sherlock
+Exec=Sherlock %U
+Icon=Sherlock
 Terminal=false
 Categories=Utility;GTK;Development;
 Keywords=Develop

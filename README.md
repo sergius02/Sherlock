@@ -1,8 +1,10 @@
 # Sherlock
 
+![alt](data/icons/128/Sherlock.svg)
+
 Sherlock helps you to find information of public IP address, elementary! 🕵️
 
-|![alt](Sherlock.png) |![alt](Sherlock2.png)|
+|![alt](screenshots/Sherlock.png) |![alt](screenshots/Sherlock2.png)|
 |---------------------|---------------------|
 
 ## Dependencies
