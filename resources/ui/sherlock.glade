@@ -7,15 +7,92 @@
     <property name="can-focus">False</property>
     <property name="resource">/com/github/sergius02/sherlock/icons/icon_github.svg</property>
   </object>
+  <object class="GtkImage" id="image_copy">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="resource">/com/github/sergius02/sherlock/icons/icon_copy.svg</property>
+  </object>
+  <object class="GtkImage" id="image_copy1">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="resource">/com/github/sergius02/sherlock/icons/icon_copy.svg</property>
+  </object>
+  <object class="GtkImage" id="image_copy10">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="resource">/com/github/sergius02/sherlock/icons/icon_copy.svg</property>
+  </object>
+  <object class="GtkImage" id="image_copy11">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="resource">/com/github/sergius02/sherlock/icons/icon_copy.svg</property>
+  </object>
+  <object class="GtkImage" id="image_copy2">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="resource">/com/github/sergius02/sherlock/icons/icon_copy.svg</property>
+  </object>
+  <object class="GtkImage" id="image_copy3">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="resource">/com/github/sergius02/sherlock/icons/icon_copy.svg</property>
+  </object>
+  <object class="GtkImage" id="image_copy4">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="resource">/com/github/sergius02/sherlock/icons/icon_copy.svg</property>
+  </object>
+  <object class="GtkImage" id="image_copy5">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="resource">/com/github/sergius02/sherlock/icons/icon_copy.svg</property>
+  </object>
+  <object class="GtkImage" id="image_copy7">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="resource">/com/github/sergius02/sherlock/icons/icon_copy.svg</property>
+  </object>
+  <object class="GtkImage" id="image_copy8">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="resource">/com/github/sergius02/sherlock/icons/icon_copy.svg</property>
+  </object>
+  <object class="GtkImage" id="image_copy9">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="resource">/com/github/sergius02/sherlock/icons/icon_copy.svg</property>
+  </object>
+  <object class="GtkImage" id="image_copyJSON">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="resource">/com/github/sergius02/sherlock/icons/icon_copy.svg</property>
+  </object>
+  <object class="GtkImage" id="image_copyJSON2">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="resource">/com/github/sergius02/sherlock/icons/icon_copy.svg</property>
+  </object>
+  <object class="GtkImage" id="image_json">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="resource">/com/github/sergius02/sherlock/icons/icon_json.svg</property>
+  </object>
+  <object class="GtkImage" id="image_json2">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="resource">/com/github/sergius02/sherlock/icons/icon_json.svg</property>
+  </object>
   <object class="GtkApplicationWindow" id="main_window">
     <property name="can-focus">False</property>
-    <property name="hexpand">True</property>
-    <property name="vexpand">True</property>
     <property name="resizable">False</property>
     <child>
       <object class="GtkStack" id="stackDeviceIP">
         <property name="visible">True</property>
         <property name="can-focus">False</property>
+        <property name="hhomogeneous">False</property>
+        <property name="vhomogeneous">False</property>
+        <property name="transition-duration">300</property>
+        <property name="transition-type">slide-right</property>
         <property name="interpolate-size">True</property>
         <child>
           <object class="GtkBox" id="boxDeviceIP">
@@ -24,7 +101,6 @@
             <property name="hexpand">True</property>
             <property name="vexpand">True</property>
             <property name="orientation">vertical</property>
-            <property name="spacing">15</property>
             <child>
               <object class="GtkBox">
                 <property name="visible">True</property>
@@ -51,12 +127,25 @@
                     <property name="can-focus">False</property>
                     <property name="halign">start</property>
                     <property name="margin-start">10</property>
-                    <property name="label" translatable="yes">IP</property>
-                    <property name="selectable">True</property>
+                    <property name="label">IP</property>
                     <attributes>
                       <attribute name="weight" value="semibold"/>
                       <attribute name="size" value="20480"/>
                     </attributes>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="deviceIP_ButtonIP">
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                    <property name="image">image_copy5</property>
+                    <property name="relief">none</property>
                   </object>
                   <packing>
                     <property name="expand">False</property>
@@ -79,6 +168,7 @@
                 <property name="margin-start">15</property>
                 <property name="margin-end">15</property>
                 <property name="margin-top">15</property>
+                <property name="margin-bottom">15</property>
                 <property name="row-spacing">15</property>
                 <property name="column-spacing">15</property>
                 <property name="row-homogeneous">True</property>
@@ -106,13 +196,26 @@
                         <property name="can-focus">False</property>
                         <property name="halign">start</property>
                         <property name="margin-start">10</property>
-                        <property name="label" translatable="yes">Timezone</property>
-                        <property name="selectable">True</property>
+                        <property name="label">Timezone</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
                         <property name="fill">True</property>
                         <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="deviceIP_ButtonTimezone">
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <property name="image">image_copy</property>
+                        <property name="relief">none</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">2</property>
                       </packing>
                     </child>
                   </object>
@@ -144,13 +247,26 @@
                         <property name="can-focus">False</property>
                         <property name="halign">start</property>
                         <property name="margin-start">10</property>
-                        <property name="label" translatable="yes">Latitude</property>
-                        <property name="selectable">True</property>
+                        <property name="label">Latitude</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
                         <property name="fill">True</property>
                         <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="deviceIP_ButtonLatLong">
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <property name="image">image_copy1</property>
+                        <property name="relief">none</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">2</property>
                       </packing>
                     </child>
                   </object>
@@ -182,13 +298,26 @@
                         <property name="can-focus">False</property>
                         <property name="halign">start</property>
                         <property name="margin-start">10</property>
-                        <property name="label" translatable="yes">City</property>
-                        <property name="selectable">True</property>
+                        <property name="label">City</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
                         <property name="fill">True</property>
                         <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="deviceIP_ButtonAddress">
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <property name="image">image_copy2</property>
+                        <property name="relief">none</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">2</property>
                       </packing>
                     </child>
                   </object>
@@ -220,13 +349,26 @@
                         <property name="can-focus">False</property>
                         <property name="halign">start</property>
                         <property name="margin-start">10</property>
-                        <property name="label" translatable="yes">AS</property>
-                        <property name="selectable">True</property>
+                        <property name="label">AS</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
                         <property name="fill">True</property>
                         <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="deviceIP_ButtonAS">
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <property name="image">image_copy3</property>
+                        <property name="relief">none</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">2</property>
                       </packing>
                     </child>
                   </object>
@@ -257,12 +399,26 @@
                         <property name="can-focus">False</property>
                         <property name="halign">start</property>
                         <property name="margin-start">10</property>
-                        <property name="label" translatable="yes">ISP</property>
+                        <property name="label">ISP</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
                         <property name="fill">True</property>
                         <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="deviceIP_ButtonISP">
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <property name="image">image_copy4</property>
+                        <property name="relief">none</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">2</property>
                       </packing>
                     </child>
                   </object>
@@ -279,43 +435,15 @@
               </packing>
             </child>
             <child>
-              <object class="GtkFrame" id="frameDeviceIPJSON">
+              <object class="GtkButton" id="deviceIP_ButtonRevealerJSON">
+                <property name="label" translatable="yes">Show JSON response</property>
                 <property name="visible">True</property>
-                <property name="can-focus">False</property>
-                <property name="margin-start">15</property>
-                <property name="margin-end">15</property>
-                <property name="margin-top">15</property>
-                <property name="margin-bottom">15</property>
-                <property name="label-xalign">0.5</property>
-                <property name="shadow-type">in</property>
-                <child>
-                  <object class="GtkAlignment">
-                    <property name="visible">True</property>
-                    <property name="can-focus">False</property>
-                    <property name="margin-start">10</property>
-                    <property name="margin-end">10</property>
-                    <property name="margin-top">10</property>
-                    <property name="margin-bottom">10</property>
-                    <property name="left-padding">12</property>
-                    <child>
-                      <object class="GtkLabel" id="deviceIP_LabelJsonOutput">
-                        <property name="visible">True</property>
-                        <property name="can-focus">False</property>
-                        <property name="halign">start</property>
-                        <property name="label" translatable="yes">JSON output</property>
-                        <property name="selectable">True</property>
-                      </object>
-                    </child>
-                  </object>
-                </child>
-                <child type="label">
-                  <object class="GtkLabel">
-                    <property name="visible">True</property>
-                    <property name="can-focus">False</property>
-                    <property name="margin-top">10</property>
-                    <property name="label" translatable="yes">JSON output</property>
-                  </object>
-                </child>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="hexpand">True</property>
+                <property name="image">image_json</property>
+                <property name="relief">none</property>
+                <property name="always-show-image">True</property>
               </object>
               <packing>
                 <property name="expand">True</property>
@@ -323,10 +451,64 @@
                 <property name="position">2</property>
               </packing>
             </child>
+            <child>
+              <object class="GtkRevealer" id="deviceIP_RevealerJSON">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <!-- n-columns=2 n-rows=1 -->
+                  <object class="GtkGrid">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="row-homogeneous">True</property>
+                    <child>
+                      <object class="GtkLabel" id="deviceIP_LabelJsonOutput">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="halign">end</property>
+                        <property name="margin-start">15</property>
+                        <property name="margin-end">15</property>
+                        <property name="margin-top">15</property>
+                        <property name="margin-bottom">15</property>
+                        <property name="label">JSON output</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">0</property>
+                        <property name="top-attach">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="deviceIP_ButtonJSON">
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <property name="halign">end</property>
+                        <property name="valign">start</property>
+                        <property name="image">image_copyJSON</property>
+                        <property name="relief">none</property>
+                        <property name="always-show-image">True</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">1</property>
+                        <property name="top-attach">0</property>
+                      </packing>
+                    </child>
+                  </object>
+                </child>
+                <style>
+                  <class name="json-output-background"/>
+                </style>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">3</property>
+              </packing>
+            </child>
           </object>
           <packing>
             <property name="name">page0</property>
-            <property name="title" translatable="yes">Device IP</property>
+            <property name="title" translatable="yes">Current IP</property>
           </packing>
         </child>
         <child>
@@ -338,6 +520,7 @@
               <object class="GtkBox">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
+                <property name="margin-bottom">20</property>
                 <property name="orientation">vertical</property>
                 <child>
                   <object class="GtkLabel" id="searchIP_LabelWriteIP">
@@ -347,7 +530,7 @@
                     <property name="margin-end">15</property>
                     <property name="margin-top">15</property>
                     <property name="margin-bottom">15</property>
-                    <property name="label" translatable="yes">Write the IP to search</property>
+                    <property name="label" translatable="yes">Write the IP or domain</property>
                     <attributes>
                       <attribute name="weight" value="semibold"/>
                       <attribute name="size" value="17408"/>
@@ -408,11 +591,9 @@
               <!-- n-columns=1 n-rows=5 -->
               <object class="GtkGrid" id="searchIP_GridInfo">
                 <property name="can-focus">False</property>
-                <property name="margin-left">15</property>
-                <property name="margin-right">15</property>
                 <property name="margin-start">15</property>
                 <property name="margin-end">15</property>
-                <property name="margin-top">15</property>
+                <property name="margin-bottom">15</property>
                 <property name="row-spacing">15</property>
                 <property name="column-spacing">15</property>
                 <property name="row-homogeneous">True</property>
@@ -439,15 +620,28 @@
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
                         <property name="halign">start</property>
-                        <property name="margin-left">10</property>
                         <property name="margin-start">10</property>
-                        <property name="label" translatable="yes">Timezone</property>
-                        <property name="selectable">True</property>
+                        <property name="label">Timezone</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
                         <property name="fill">True</property>
                         <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="searchIP_ButtonTimezone">
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <property name="image">image_copy8</property>
+                        <property name="relief">none</property>
+                        <property name="always-show-image">True</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">2</property>
                       </packing>
                     </child>
                   </object>
@@ -478,15 +672,27 @@
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
                         <property name="halign">start</property>
-                        <property name="margin-left">10</property>
                         <property name="margin-start">10</property>
-                        <property name="label" translatable="yes">Latitude</property>
-                        <property name="selectable">True</property>
+                        <property name="label">Latitude</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
                         <property name="fill">True</property>
                         <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="searchIP_ButtonLatLong">
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <property name="image">image_copy7</property>
+                        <property name="relief">none</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">2</property>
                       </packing>
                     </child>
                   </object>
@@ -517,15 +723,27 @@
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
                         <property name="halign">start</property>
-                        <property name="margin-left">10</property>
                         <property name="margin-start">10</property>
-                        <property name="label" translatable="yes">City</property>
-                        <property name="selectable">True</property>
+                        <property name="label">City</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
                         <property name="fill">True</property>
                         <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="searchIP_ButtonAddress">
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <property name="image">image_copy9</property>
+                        <property name="relief">none</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">2</property>
                       </packing>
                     </child>
                   </object>
@@ -556,15 +774,27 @@
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
                         <property name="halign">start</property>
-                        <property name="margin-left">10</property>
                         <property name="margin-start">10</property>
-                        <property name="label" translatable="yes">AS</property>
-                        <property name="selectable">True</property>
+                        <property name="label">AS</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
                         <property name="fill">True</property>
                         <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="searchIP_ButtonAS">
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <property name="image">image_copy11</property>
+                        <property name="relief">none</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">2</property>
                       </packing>
                     </child>
                   </object>
@@ -594,14 +824,27 @@
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
                         <property name="halign">start</property>
-                        <property name="margin-left">10</property>
                         <property name="margin-start">10</property>
-                        <property name="label" translatable="yes">ISP</property>
+                        <property name="label">ISP</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
                         <property name="fill">True</property>
                         <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="searchIP_ButtonISP">
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <property name="image">image_copy10</property>
+                        <property name="relief">none</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">2</property>
                       </packing>
                     </child>
                   </object>
@@ -618,51 +861,69 @@
               </packing>
             </child>
             <child>
-              <object class="GtkFrame" id="searchIP_FrameJSON">
+              <object class="GtkButton" id="searchIP_ButtonRevealerJSON">
+                <property name="label" translatable="yes">Show JSON response</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="image">image_json2</property>
+                <property name="relief">none</property>
+                <property name="always-show-image">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkRevealer" id="searchIP_RevealerJSON">
+                <property name="visible">True</property>
                 <property name="can-focus">False</property>
-                <property name="margin-left">15</property>
-                <property name="margin-right">15</property>
-                <property name="margin-start">15</property>
-                <property name="margin-end">15</property>
-                <property name="margin-top">15</property>
-                <property name="margin-bottom">15</property>
-                <property name="label-xalign">0.5</property>
-                <property name="shadow-type">in</property>
                 <child>
-                  <object class="GtkAlignment">
+                  <!-- n-columns=2 n-rows=1 -->
+                  <object class="GtkGrid">
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
-                    <property name="margin-left">10</property>
-                    <property name="margin-right">10</property>
-                    <property name="margin-start">10</property>
-                    <property name="margin-end">10</property>
-                    <property name="margin-top">10</property>
-                    <property name="margin-bottom">10</property>
-                    <property name="left-padding">12</property>
+                    <property name="row-homogeneous">True</property>
                     <child>
                       <object class="GtkLabel" id="searchIP_LabelJsonOutput">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
-                        <property name="halign">start</property>
+                        <property name="halign">end</property>
+                        <property name="margin-start">15</property>
+                        <property name="margin-end">15</property>
+                        <property name="margin-top">15</property>
+                        <property name="margin-bottom">15</property>
                         <property name="label" translatable="yes">JSON output</property>
-                        <property name="selectable">True</property>
                       </object>
+                      <packing>
+                        <property name="left-attach">0</property>
+                        <property name="top-attach">0</property>
+                      </packing>
                     </child>
-                  </object>
-                </child>
-                <child type="label">
-                  <object class="GtkLabel">
-                    <property name="visible">True</property>
-                    <property name="can-focus">False</property>
-                    <property name="margin-top">10</property>
-                    <property name="label" translatable="yes">JSON output</property>
+                    <child>
+                      <object class="GtkButton" id="searchIP_ButtonJSON">
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <property name="halign">end</property>
+                        <property name="valign">start</property>
+                        <property name="image">image_copyJSON2</property>
+                        <property name="relief">none</property>
+                        <property name="always-show-image">True</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">1</property>
+                        <property name="top-attach">0</property>
+                      </packing>
+                    </child>
                   </object>
                 </child>
               </object>
               <packing>
-                <property name="expand">True</property>
+                <property name="expand">False</property>
                 <property name="fill">True</property>
-                <property name="position">2</property>
+                <property name="position">3</property>
               </packing>
             </child>
           </object>

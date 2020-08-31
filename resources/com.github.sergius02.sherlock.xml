@@ -10,5 +10,7 @@
     <file>icons/icon_isp.svg</file>
     <file>icons/icon_as.svg</file>
     <file>icons/icon_github.svg</file>
+    <file>icons/icon_copy.svg</file>
+    <file>icons/icon_json.svg</file>
   </gresource>
 </gresources>

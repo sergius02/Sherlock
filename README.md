@@ -2,17 +2,8 @@
 
 Sherlock helps you to find information of public IP address, elementary! 🕵️
 
-![alt](Sherlock.png)
-
-![alt](Sherlock2.png)
-
-> TODO
->
-> * Internacionalization
-> * Improve and clean the code!
-> * Create installation package
-
-# Install it from source
+|![alt](Sherlock.png) |![alt](Sherlock2.png)|
+|---------------------|---------------------|
 
 ## Dependencies
 
