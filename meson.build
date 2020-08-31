@@ -1,6 +1,6 @@
 # Project name, programming language and version
 project (
-    'Sherlock',
+    'com.github.sergius02.sherlock',
     'vala', 'c',
     version: '0.0.1'
 )
