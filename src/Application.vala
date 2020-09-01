@@ -11,13 +11,13 @@ public class Application : Gtk.Application {
         var builder = new Gtk.Builder.from_resource ("/com/github/sergius02/sherlock/ui/sherlock.glade");
 
         builder.set_application (this);
-        var window = builder.get_object("main_window") as Gtk.ApplicationWindow;
-        var clipboard = Gtk.Clipboard.get_for_display (window.get_display(), Gdk.SELECTION_CLIPBOARD);
+        var window = builder.get_object ("main_window") as Gtk.ApplicationWindow;
+        var clipboard = Gtk.Clipboard.get_for_display (window.get_display (), Gdk.SELECTION_CLIPBOARD);
 
-        add_window(window);
+        add_window (window);
 
         window.show_all ();
 
-        new Sherlock.Window(builder, clipboard);
+        new Sherlock.Window (builder, clipboard);
     }
 }

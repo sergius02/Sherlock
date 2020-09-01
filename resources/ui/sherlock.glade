@@ -942,9 +942,12 @@
         <property name="show-close-button">True</property>
         <child type="title">
           <object class="GtkLinkButton" id="headerbar_github">
+            <property name="label" translatable="yes">Fork me on Github!</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
+            <property name="halign">start</property>
+            <property name="margin-start">10</property>
             <property name="image">image_Github</property>
             <property name="relief">none</property>
             <property name="always-show-image">True</property>

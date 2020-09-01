@@ -5,13 +5,13 @@ public class Sherlock.Window {
     public Window (Gtk.Builder builder, Gtk.Clipboard clipboard) {
 
         // The Headerbar
-        new Sherlock.HeaderBar(builder);
+        new Sherlock.HeaderBar (builder);
 
         // Device IP page
-        new Sherlock.DeviceIPBox(builder, clipboard);
+        new Sherlock.DeviceIPBox (builder, clipboard);
 
         // Search IP page
-        new Sherlock.SearchIPBox(builder, clipboard);
+        new Sherlock.SearchIPBox (builder, clipboard);
     }
 
     
