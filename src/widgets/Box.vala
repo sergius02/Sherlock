@@ -1,6 +1,7 @@
 public abstract class Sherlock.Box : Gtk.Box {
 
-    protected Gtk.Application application { get; set; }
+    protected Sherlock.Application application { get; set; }
+    
     protected Gtk.Builder builder { get; set; }
     protected Gtk.Clipboard clipboard { get; set; }
     protected Notification notification { get; set; }
@@ -32,7 +33,7 @@ public abstract class Sherlock.Box : Gtk.Box {
     protected Gtk.Button button_buttonrevealer { get; set; }
     
     protected void initUI (string stackPrefix) {
-        this.application = this.builder.get_application ();
+        this.builder = application.builder;
         this.notification = new Notification (_("Sherlock"));
 
         this.image_address = builder.get_object (stackPrefix + "_ImageAddress") as Gtk.Image;

@@ -1,9 +1,8 @@
 public class Sherlock.DeviceIPBox : Sherlock.Box {
 
-    public DeviceIPBox (Gtk.Builder builder, Gtk.Clipboard clipboard) {
-        this.builder = builder;
-        this.clipboard = clipboard;
-
+    public DeviceIPBox (Sherlock.Application application) {
+        this.application = application;
+        
         initUI ("deviceIP");
 
         this.image_ip = builder.get_object ("deviceIP_ImageIP") as Gtk.Image;

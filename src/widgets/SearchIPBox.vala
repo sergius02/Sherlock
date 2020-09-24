@@ -1,8 +1,7 @@
 public class Sherlock.SearchIPBox : Sherlock.Box {
 
-    public SearchIPBox (Gtk.Builder builder, Gtk.Clipboard clipboard) {
-        this.builder = builder;
-        this.clipboard = clipboard;
+    public SearchIPBox (Sherlock.Application application) {
+        this.application = application;
 
         initUI ("searchIP");
 
