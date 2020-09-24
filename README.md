@@ -7,7 +7,7 @@
 |![alt](screenshots/Sherlock.png) |![alt](screenshots/Sherlock2.png)|
 |---------------------|---------------------|
 
-Sherlock helps you to find information of public IP address, elementary! 🕵️
+With Sherlock you can find information about your current IP or search for public IP addresses information , elementary! 🕵️
 
 ## Dependencies
 
@@ -32,9 +32,12 @@ git clone https://github.com/sergius02/Sherlock Sherlock
 cd Sherlock
 # run meson
 meson build --prefix=/usr
-# cd to build, build and test
+# cd to build
 cd build
-ninja && ./Sherlock
+# build
+ninja
+# install
+sudo ninja install
 ```
 
 ## Credits

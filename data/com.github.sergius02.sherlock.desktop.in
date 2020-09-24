@@ -6,5 +6,5 @@ GenericName=Sherlock
 Exec=com.github.sergius02.sherlock %U
 Icon=com.github.sergius02.sherlock
 Terminal=false
-Categories=Utility;GTK;Development;
-Keywords=Develop
+Categories=Utility;GTK;Development;Network;
+Keywords=Utility;GTK;Development;Network;

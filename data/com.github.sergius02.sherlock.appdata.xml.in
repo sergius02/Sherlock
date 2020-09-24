@@ -4,20 +4,32 @@
   <id>com.github.sergius02.Sherlock</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
-  <name>Your App's Name</name>
-  <summary>A Catchy Tagline</summary>
+  <name>Sherlock</name>
+  <summary>Get information from an IP</summary>
   <description>
-    <p>A quick summary of your app's main selling points and features. Just a couple sentences per paragraph is best.</p>
+    <p>With Sherlock you can find information about your current IP or search for public IP addresses information , elementary!</p>
   </description>
+  <categories>
+​    <category>GTK</category>
+​    <category>Utility</category>
+    <category>Development</category>
+    <category>Network</category>
+  </categories>
   <provides>
     <binary>com.github.sergius02.Sherlock</binary>
   </provides>
   <developer_name>Sergio Fernández Celorio</developer_name>
-  <url type="homepage"></url>
+  <url type="homepage">https://github.com/sergius02/Sherlock</url>
   <url type="bugtracker">https://github.com/sergius02/Sherlock/issues</url>
   <url type="help">https://github.com/sergius02/Sherlock/issues</url>
   <screenshots>
     <screenshot type="default">
+      <caption>Normal variant</caption>
+      <image>https://github.com/sergius02/Sherlock/raw/master/screenshots/Sherlock.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Normal variant</caption>
+      <image>https://github.com/sergius02/Sherlock/raw/master/screenshots/Sherlock2.png</image>
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1">
@@ -50,6 +62,6 @@
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
   <releases>
-    <rel8ease version="0.0.1" date="2020-01-01"/>
+    <release version="1.0.0" date="2020-01-01"/>
   </releases>
 </component>
