@@ -4,6 +4,8 @@
 </p>
 <h1 align="center">Sherlock</h1>
 
+[![Build Status](https://travis-ci.org/sergius02/Sherlock.svg?branch=master)](https://travis-ci.org/sergius02/Sherlock)
+
 |![alt](screenshots/Sherlock.png) |![alt](screenshots/Sherlock2.png)|
 |---------------------|---------------------|
 
