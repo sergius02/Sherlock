@@ -1,17 +1,15 @@
 public class Sherlock.Window {
 
-    private Gtk.Builder builder { set; get; }
-
-    public Window (Gtk.Builder builder, Gtk.Clipboard clipboard) {
+    public Window (Sherlock.Application application) {
 
         // The Headerbar
-        new Sherlock.HeaderBar (builder);
+        new Sherlock.HeaderBar (application);
 
         // Device IP page
-        new Sherlock.DeviceIPBox (builder, clipboard);
+        new Sherlock.DeviceIPBox (application);
 
         // Search IP page
-        new Sherlock.SearchIPBox (builder, clipboard);
+        new Sherlock.SearchIPBox (application);
     }
 
     

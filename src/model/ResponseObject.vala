@@ -1,19 +1,19 @@
 public class Sherlock.ResponseObject {
 
-    public string status { get; set; }
-    public string country { get; set; }
-    public string countryCode { get; set; }
-    public string region { get; set; }
-    public string regionName { get; set; }
-    public string city { get; set; }
-    public string zip { get; set; }
-    public string lat { get; set; }
-    public string lon { get; set; }
-    public string timezone { get; set; }
-    public string isp { get; set; }
-    public string org { get; set; }
-    public string as { get; set; }
-    public string query { get; set; }
+    public string status;
+    public string country;
+    public string countryCode;
+    public string region;
+    public string regionName;
+    public string city;
+    public string zip;
+    public string lat;
+    public string lon;
+    public string timezone;
+    public string isp;
+    public string org;
+    public string as;
+    public string query;
 
     public ResponseObject (Json.Object root_object) {
         this.status = root_object.get_string_member("status");
