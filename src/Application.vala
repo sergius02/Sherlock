@@ -2,6 +2,8 @@ public class Sherlock.Application : Gtk.Application {
 
     public Gtk.Builder builder;
 
+    public Notification notification;
+
     public Gtk.CssProvider cssProvider;
 
     public Gtk.Clipboard clipboard;
@@ -25,6 +27,8 @@ public class Sherlock.Application : Gtk.Application {
         this.cssProvider = new Gtk.CssProvider();
         this.cssProvider.load_from_resource ("/com/github/sergius02/sherlock/css/sherlock.css");
         Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), cssProvider, Gtk.STYLE_PROVIDER_PRIORITY_USER);
+
+        this.notification = new Notification (_("Sherlock"));
 
         builder.set_application (this);
         this.window = builder.get_object ("main_window") as Gtk.ApplicationWindow;
