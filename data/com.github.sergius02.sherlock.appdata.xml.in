@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2020 Sergio Fernández Celorio <scelorio1990@gmail.com> -->
 <component type="desktop">
-  <id>com.github.sergius02.Sherlock</id>
+  <id>com.github.sergius02.sherlock</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Sherlock</name>
@@ -16,7 +16,7 @@
     <category>Network</category>
   </categories>
   <provides>
-    <binary>com.github.sergius02.Sherlock</binary>
+    <binary>com.github.sergius02.sherlock</binary>
   </provides>
   <developer_name>Sergio Fernández Celorio</developer_name>
   <url type="homepage">https://github.com/sergius02/Sherlock</url>
