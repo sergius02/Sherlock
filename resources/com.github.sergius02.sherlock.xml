@@ -2,6 +2,7 @@
 <gresources>
   <gresource prefix="/com/github/sergius02/sherlock/">
     <file>ui/sherlock.glade</file>
+    <file>css/sherlock.css</file>
 
     <file>icons/icon_ip.svg</file>
     <file>icons/icon_address.svg</file>

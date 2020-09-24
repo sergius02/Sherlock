@@ -971,6 +971,9 @@
         <child>
           <placeholder/>
         </child>
+        <style>
+          <class name="sherlock-headerbar"/>
+        </style>
       </object>
     </child>
   </object>

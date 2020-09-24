@@ -1,5 +1,7 @@
 public class Application : Gtk.Application {
 
+    public Gtk.CssProvider cssProvider;
+
     public Application () {
         Object (
             application_id: "com.github.sergius02.sherlock",
@@ -9,6 +11,9 @@ public class Application : Gtk.Application {
 
     protected override void activate () {
         var builder = new Gtk.Builder.from_resource ("/com/github/sergius02/sherlock/ui/sherlock.glade");
+        this.cssProvider = new Gtk.CssProvider();
+        this.cssProvider.load_from_resource ("/com/github/sergius02/sherlock/css/sherlock.css");
+        Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), cssProvider, Gtk.STYLE_PROVIDER_PRIORITY_USER);
 
         builder.set_application (this);
         var window = builder.get_object ("main_window") as Gtk.ApplicationWindow;
