@@ -920,6 +920,9 @@
                         <property name="top-attach">0</property>
                       </packing>
                     </child>
+                    <style>
+                      <class name="json-output-background"/>
+                    </style>
                   </object>
                 </child>
               </object>
