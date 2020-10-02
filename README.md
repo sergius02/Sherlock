@@ -4,7 +4,9 @@
 </p>
 <h1 align="center">Sherlock</h1>
 
-[![Build Status](https://travis-ci.org/sergius02/Sherlock.svg?branch=master)](https://travis-ci.org/sergius02/Sherlock)
+![Last Release](https://img.shields.io/github/v/release/sergius02/Sherlock?include_prereleases&style=for-the-badge)
+![Build Status](https://img.shields.io/travis/sergius02/Sherlock/master?style=for-the-badge)
+![License](https://img.shields.io/github/license/sergius02/Sherlock?style=for-the-badge)
 
 |![alt](screenshots/Sherlock.png) |![alt](screenshots/Sherlock2.png)|
 |---------------------|---------------------|
