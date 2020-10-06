@@ -11,6 +11,10 @@
 |![alt](screenshots/Sherlock.png) |![alt](screenshots/Sherlock2.png)|
 |---------------------|---------------------|
 
+<p align="center">
+  <a href="https://appcenter.elementary.io/com.github.sergius02.sherlock"><img src="https://appcenter.elementary.io/badge.svg" alt="Get it on AppCenter" /></a>
+</p>
+
 With Sherlock you can find information about your current IP or search for public IP addresses information , elementary! 🕵️
 
 ## Dependencies
