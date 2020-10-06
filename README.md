@@ -22,8 +22,6 @@ Ensure you have these dependencies installed
 * gtk+-3.0
 * libsoup-2.4
 * json-glib-1.0
-* gee-0.8
-* gmodule-2.0
 
 ## Install, build and run
 
