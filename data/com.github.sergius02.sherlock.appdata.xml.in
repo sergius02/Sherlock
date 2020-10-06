@@ -62,7 +62,7 @@
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
   <releases>
-    <release version="1.0.0" date="2020-01-01"/>
     <release version="1.0.1" date="2020-10-06"/>
+    <release version="1.0.0" date="2020-01-01"/>
   </releases>
 </component>
