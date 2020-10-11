@@ -1,1 +1,3 @@
 src/Application.vala
+src/widgets/Box.vala
+resources/ui/sherlock.glade
