@@ -30,18 +30,27 @@ Ensure you have these dependencies installed
 ## Install, build and run
 
 ```bash
-# install elementary-sdk, meson and ninja
-sudo apt install elementary-sdk meson ninja
+# FOR ELEMENTARY OS USERS
+sudo apt install elementary-sdk
+
+# FOR THE REST
+sudo apt install cmake libgtk-3-dev gettext libjson-glib-dev libsoup2.4-dev
+
 # clone repository
 git clone https://github.com/sergius02/Sherlock Sherlock
+
 # cd to dir
 cd Sherlock
+
 # run meson
 meson build --prefix=/usr
+
 # cd to build
 cd build
+
 # build
 ninja
+
 # install
 sudo ninja install
 ```
