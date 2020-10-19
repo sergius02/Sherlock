@@ -22,6 +22,7 @@ public abstract class Sherlock.Box : Gtk.Box {
     protected Gtk.Button buttonLatlong;
     protected Gtk.Button buttonISP;
     protected Gtk.Button buttonAS;
+    protected Gtk.Button buttonRefresh;
 
     protected Gtk.Label labelJSONOutput;
     protected Gtk.Button buttonJSONOutput;
