@@ -4,7 +4,7 @@ public class Sherlock.Application : Gtk.Application {
 
     public Notification notification;
 
-    public Gtk.CssProvider cssProvider;
+    public Gtk.CssProvider css_provider;
 
     public Gtk.Clipboard clipboard;
 
@@ -24,9 +24,10 @@ public class Sherlock.Application : Gtk.Application {
 
     protected override void activate () {
         this.builder = new Gtk.Builder.from_resource ("/com/github/sergius02/sherlock/ui/sherlock.glade");
-        this.cssProvider = new Gtk.CssProvider();
-        this.cssProvider.load_from_resource ("/com/github/sergius02/sherlock/css/sherlock.css");
-        Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), cssProvider, Gtk.STYLE_PROVIDER_PRIORITY_USER);
+        this.css_provider = new Gtk.CssProvider ();
+        this.css_provider.load_from_resource ("/com/github/sergius02/sherlock/css/sherlock.css");
+        Gtk.StyleContext.add_provider_for_screen (
+            Gdk.Screen.get_default (), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER);
 
         this.notification = new Notification (_("Sherlock"));
 
@@ -40,4 +41,5 @@ public class Sherlock.Application : Gtk.Application {
 
         new Sherlock.Window (this);
     }
+
 }

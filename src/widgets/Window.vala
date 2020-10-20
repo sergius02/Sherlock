@@ -12,6 +12,4 @@ public class Sherlock.Window {
         new Sherlock.SearchIPBox (application);
     }
 
-    
-    
 }
