@@ -27,7 +27,7 @@ public class Sherlock.HTTPRequestHelper {
         try {
             parser.load_from_data (this.result, -1);
         } catch (GLib.Error e) {
-            stderr.printf ("Error al parsear el JSON");
+            stderr.printf (_("Error parsing JSON"));
         }
 
         root = parser.get_root ();
