@@ -1,26 +1,26 @@
 public class Sherlock.SearchIPBox : Sherlock.Box {
 
-    private Gtk.Grid gridInfo;
+    private Gtk.Grid grid_info;
 
-    private Gtk.Button buttonSearchIP;
+    private Gtk.Button button_search_ip;
 
-    private Gtk.Entry entryIP;
+    private Gtk.Entry entry_ip;
 
     public SearchIPBox (Sherlock.Application application) {
         this.application = application;
 
-        initUI ("searchIP");
+        init_ui ("searchIP");
 
-        this.gridInfo = application.builder.get_object ("searchIP_GridInfo") as Gtk.Grid;
-        gridInfo.visible = false;
-        this.buttonRevealer.visible = false;
+        this.grid_info = application.builder.get_object ("searchIP_GridInfo") as Gtk.Grid;
+        grid_info.visible = false;
+        this.button_revealer.visible = false;
 
-        this.buttonSearchIP = application.builder.get_object ("searchIP_ButtonSearchIP") as Gtk.Button;
-        buttonSearchIP.clicked.connect( () => {
-            this.entryIP = application.builder.get_object ("searchIP_EntryIP") as Gtk.Entry;
-            this.gridInfo.visible = true;
-            this.buttonRevealer.visible = true;
-            fillLabels (this.entryIP.get_text ());
+        this.button_search_ip = application.builder.get_object ("searchIP_ButtonSearchIP") as Gtk.Button;
+        button_search_ip.clicked.connect (() => {
+            this.entry_ip = application.builder.get_object ("searchIP_EntryIP") as Gtk.Entry;
+            this.grid_info.visible = true;
+            this.button_revealer.visible = true;
+            fill_labels (this.entry_ip.get_text ());
         });
     }
 

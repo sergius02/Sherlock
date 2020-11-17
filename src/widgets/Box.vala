@@ -2,101 +2,93 @@ public abstract class Sherlock.Box : Gtk.Box {
 
     protected Sherlock.Application application;
 
-    protected Gtk.Label labelIP;
-    protected Gtk.Label labelAddress;
-    protected Gtk.Label labelTimezone;
-    protected Gtk.Label labelLatlong;
-    protected Gtk.Label labelISP;
-    protected Gtk.Label labelAS;
+    protected Gtk.Label label_ip;
+    protected Gtk.Label label_address;
+    protected Gtk.Label label_timezone;
+    protected Gtk.Label label_lat_long;
+    protected Gtk.Label label_isp;
+    protected Gtk.Label label_as;
 
-    protected Gtk.Image imageIP;
-    protected Gtk.Image imageAddress;
-    protected Gtk.Image imageTimezone;
-    protected Gtk.Image imageLatlong;
-    protected Gtk.Image imageISP;
-    protected Gtk.Image imageAS;
+    protected Gtk.Button button_ip;
+    protected Gtk.Button button_address;
+    protected Gtk.Button button_timezone;
+    protected Gtk.Button button_latlong;
+    protected Gtk.Button button_isp;
+    protected Gtk.Button button_as;
+    protected Gtk.Button button_refresh;
 
-    protected Gtk.Button buttonIP;
-    protected Gtk.Button buttonAddress;
-    protected Gtk.Button buttonTimezone;
-    protected Gtk.Button buttonLatlong;
-    protected Gtk.Button buttonISP;
-    protected Gtk.Button buttonAS;
+    protected Gtk.Label label_json_output;
+    protected Gtk.Button button_json_output;
 
-    protected Gtk.Label labelJSONOutput;
-    protected Gtk.Button buttonJSONOutput;
+    protected Gtk.Button button_revealer;
+    protected Gtk.Revealer revealer_json;
 
-    protected Gtk.Button buttonRevealer;
-    protected Gtk.Revealer revealerJSON;
-    
-    protected void initUI (string stackPrefix) {
-        this.imageAddress = this.application.builder.get_object (stackPrefix + "_ImageAddress") as Gtk.Image;
-        this.imageTimezone = this.application.builder.get_object (stackPrefix + "_ImageTimezone") as Gtk.Image;
-        this.imageLatlong = this.application.builder.get_object (stackPrefix + "_ImageLatLong") as Gtk.Image;
-        this.imageISP = this.application.builder.get_object (stackPrefix + "_ImageISP") as Gtk.Image;
-        this.imageAS = this.application.builder.get_object (stackPrefix + "_ImageAS") as Gtk.Image;
+    protected void init_ui (string stack_prefix) {
+        this.label_address = this.application.builder.get_object (stack_prefix + "_LabelAddress") as Gtk.Label;
+        this.label_timezone = this.application.builder.get_object (stack_prefix + "_LabelTimezone") as Gtk.Label;
+        this.label_lat_long = this.application.builder.get_object (stack_prefix + "_LabelLatLong") as Gtk.Label;
+        this.label_isp = this.application.builder.get_object (stack_prefix + "_LabelISP") as Gtk.Label;
+        this.label_as = this.application.builder.get_object (stack_prefix + "_LabelAS") as Gtk.Label;
 
-        this.labelAddress = this.application.builder.get_object (stackPrefix + "_LabelAddress") as Gtk.Label;
-        this.labelTimezone = this.application.builder.get_object (stackPrefix + "_LabelTimezone") as Gtk.Label;
-        this.labelLatlong = this.application.builder.get_object (stackPrefix + "_LabelLatLong") as Gtk.Label;
-        this.labelISP = this.application.builder.get_object (stackPrefix + "_LabelISP") as Gtk.Label;
-        this.labelAS = this.application.builder.get_object (stackPrefix + "_LabelAS") as Gtk.Label;
+        this.button_address = this.application.builder.get_object (stack_prefix + "_ButtonAddress") as Gtk.Button;
+        this.button_timezone = this.application.builder.get_object (stack_prefix + "_ButtonTimezone") as Gtk.Button;
+        this.button_latlong = this.application.builder.get_object (stack_prefix + "_ButtonLatLong") as Gtk.Button;
+        this.button_isp = this.application.builder.get_object (stack_prefix + "_ButtonISP") as Gtk.Button;
+        this.button_as = this.application.builder.get_object (stack_prefix + "_ButtonAS") as Gtk.Button;
 
-        this.buttonAddress = this.application.builder.get_object (stackPrefix + "_ButtonAddress") as Gtk.Button;
-        this.buttonTimezone = this.application.builder.get_object (stackPrefix + "_ButtonTimezone") as Gtk.Button;
-        this.buttonLatlong = this.application.builder.get_object (stackPrefix + "_ButtonLatLong") as Gtk.Button;
-        this.buttonISP = this.application.builder.get_object (stackPrefix + "_ButtonISP") as Gtk.Button;
-        this.buttonAS = this.application.builder.get_object (stackPrefix + "_ButtonAS") as Gtk.Button;
+        this.button_json_output = this.application.builder.get_object (stack_prefix + "_ButtonJSON") as Gtk.Button;
+        this.label_json_output = this.application.builder.get_object (stack_prefix + "_LabelJsonOutput") as Gtk.Label;
 
-        this.buttonJSONOutput = this.application.builder.get_object (stackPrefix + "_ButtonJSON") as Gtk.Button;
-        this.labelJSONOutput = this.application.builder.get_object (stackPrefix + "_LabelJsonOutput") as Gtk.Label;
+        set_copy_button_action (this.button_address, label_address, "Address");
+        set_copy_button_action (this.button_timezone, label_timezone, "Timezone");
+        set_copy_button_action (this.button_latlong, label_lat_long, "Latitude and longitude");
+        set_copy_button_action (this.button_isp, label_isp, "ISP");
+        set_copy_button_action (this.button_as, label_as, "AS");
+        set_copy_button_action (this.button_json_output, label_json_output, "JSON");
 
-        setCopyButtonAction (this.buttonAddress, labelAddress, "Address");
-        setCopyButtonAction (this.buttonTimezone, labelTimezone, "Timezone");
-        setCopyButtonAction (this.buttonLatlong, labelLatlong, "Latitude and longitude");
-        setCopyButtonAction (this.buttonISP, labelISP, "ISP");
-        setCopyButtonAction (this.buttonAS, labelAS, "AS");
-        setCopyButtonAction (this.buttonJSONOutput, labelJSONOutput, "JSON");
+        this.button_revealer = this.application.builder.get_object (stack_prefix + "_ButtonRevealerJSON") as Gtk.Button;
+        this.revealer_json = this.application.builder.get_object (stack_prefix + "_RevealerJSON") as Gtk.Revealer;
 
-        this.buttonRevealer = this.application.builder.get_object (stackPrefix + "_ButtonRevealerJSON") as Gtk.Button;
-        this.revealerJSON = this.application.builder.get_object (stackPrefix + "_RevealerJSON") as Gtk.Revealer;
-
-        this.buttonRevealer.clicked.connect( () => {
-            if (!this.revealerJSON.get_reveal_child()) {
-                this.revealerJSON.set_reveal_child(true);
-                this.buttonRevealer.set_label(_("Hide JSON response"));
+        this.button_revealer.clicked.connect (() => {
+            if (!this.revealer_json.get_reveal_child ()) {
+                this.revealer_json.set_reveal_child (true);
+                this.button_revealer.set_label (_("Hide JSON response"));
             }
             else {
-                this.revealerJSON.set_reveal_child(false);
-                this.buttonRevealer.set_label(_("Show JSON response"));
+                this.revealer_json.set_reveal_child (false);
+                this.button_revealer.set_label (_("Show JSON response"));
             }
         });
     }
 
-    protected void setCopyButtonAction (Gtk.Button button, Gtk.Label label, string notificationText) {
-        button.clicked.connect( () => {
+    protected void set_copy_button_action (Gtk.Button button, Gtk.Label label, string notification_text) {
+        button.clicked.connect (() => {
             this.application.clipboard.set_text (label.get_text (), -1);
-            this.application.notification.set_body (_(notificationText + " copied to clipboard!"));
+            this.application.notification.set_body (_(notification_text + " copied to clipboard!"));
             this.application.send_notification ("com.github.sergius02.sherlock", application.notification);
         });
     }
 
-    protected void fillLabels (string text) {
-        var httpRequestHelper = new HTTPRequestHelper ();
-        var response = httpRequestHelper.generateHTTPRequest (text);
+    protected void fill_labels (string text) {
+        var http_request_helper = new HTTPRequestHelper ();
+        var response = http_request_helper.generate_http_request (text);
 
         if (text == "") {
-            this.labelIP.set_text (response.query);
+            this.label_ip.set_text (response.query);
         }
-        
-        this.labelAddress.set_text (response.zip + " " + response.city + ", " + response.regionName + ", " + response.country);
-        this.labelTimezone.set_text (response.timezone);
-        this.labelLatlong.set_text (response.lat + ", " + response.lon);
-        this.labelISP.set_text (response.org + ", " + response.isp);
-        this.labelAS.set_text (response.as);
 
-        var resultJSON = httpRequestHelper.get_result ();
-        this.labelJSONOutput.set_text (resultJSON);
+        this.label_address.set_text (
+            response.zip + " " +
+            response.city + ", " +
+            response.region_name + ", " +
+            response.country
+        );
+        this.label_timezone.set_text (response.timezone);
+        this.label_lat_long.set_text (response.lat + ", " + response.lon);
+        this.label_isp.set_text (response.org + ", " + response.isp);
+        this.label_as.set_text (response.as);
+
+        this.label_json_output.set_text (http_request_helper.get_result ());
     }
 
 }
