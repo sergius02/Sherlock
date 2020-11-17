@@ -1,0 +1,61 @@
+# Russian translations for com.github.sergius02.sherlock package.
+# Copyright (C) 2020 THE com.github.sergius02.sherlock'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.sergius02.sherlock package.
+# Automatically generated, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.sergius02.sherlock\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-11 16:21+0400\n"
+"PO-Revision-Date: 2020-10-11 16:26+0400\n"
+"Last-Translator: Andrey Kultyapov <camellan@yandex.ru>\n"
+"Language-Team: none\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 2.2.3\n"
+
+#: src/Application.vala:31
+msgid "Sherlock"
+msgstr "Sherlock"
+
+#: src/widgets/Box.vala:67
+msgid "Hide JSON response"
+msgstr "Скрыть ответ JSON"
+
+#: src/widgets/Box.vala:71 resources/ui/sherlock.glade:442
+#: resources/ui/sherlock.glade:868
+msgid "Show JSON response"
+msgstr "Показать ответ JSON"
+
+#: src/widgets/Box.vala:79
+msgid " copied to clipboard!"
+msgstr " скопировано в буфер обмена!"
+
+#: resources/ui/sherlock.glade:514
+msgid "Current IP"
+msgstr "Текущий IP"
+
+#: resources/ui/sherlock.glade:536
+msgid "Write the IP or domain"
+msgstr "Напишите IP или домен"
+
+#: resources/ui/sherlock.glade:567
+msgid "Search"
+msgstr "Поиск"
+
+#: resources/ui/sherlock.glade:900
+msgid "JSON output"
+msgstr "Вывод JSON"
+
+#: resources/ui/sherlock.glade:938
+msgid "Search IP"
+msgstr "Искать IP"
+
+#: resources/ui/sherlock.glade:951
+msgid "Fork me on Github!"
+msgstr "Fork me on Github!"
