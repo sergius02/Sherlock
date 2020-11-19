@@ -13,6 +13,7 @@ public abstract class Sherlock.Box : Gtk.Box {
     protected Gtk.Button button_address;
     protected Gtk.Button button_timezone;
     protected Gtk.Button button_latlong;
+    protected Gtk.LinkButton button_openmap;
     protected Gtk.Button button_isp;
     protected Gtk.Button button_as;
     protected Gtk.Button button_refresh;
@@ -33,6 +34,7 @@ public abstract class Sherlock.Box : Gtk.Box {
         this.button_address = this.application.builder.get_object (stack_prefix + "_ButtonAddress") as Gtk.Button;
         this.button_timezone = this.application.builder.get_object (stack_prefix + "_ButtonTimezone") as Gtk.Button;
         this.button_latlong = this.application.builder.get_object (stack_prefix + "_ButtonLatLong") as Gtk.Button;
+        this.button_openmap = this.application.builder.get_object (stack_prefix + "_LinkButtonOpenMap") as Gtk.LinkButton;
         this.button_isp = this.application.builder.get_object (stack_prefix + "_ButtonISP") as Gtk.Button;
         this.button_as = this.application.builder.get_object (stack_prefix + "_ButtonAS") as Gtk.Button;
 
@@ -45,7 +47,7 @@ public abstract class Sherlock.Box : Gtk.Box {
         set_copy_button_action (this.button_isp, label_isp, "ISP");
         set_copy_button_action (this.button_as, label_as, "AS");
         set_copy_button_action (this.button_json_output, label_json_output, "JSON");
-
+        
         this.button_revealer = this.application.builder.get_object (stack_prefix + "_ButtonRevealerJSON") as Gtk.Button;
         this.revealer_json = this.application.builder.get_object (stack_prefix + "_RevealerJSON") as Gtk.Revealer;
 
@@ -89,6 +91,8 @@ public abstract class Sherlock.Box : Gtk.Box {
         this.label_as.set_text (response.as);
 
         this.label_json_output.set_text (http_request_helper.get_result ());
+
+        this.button_openmap.uri = "https://www.openstreetmap.org/#map=15/" + response.lat + "/" + response.lon;
     }
 
 }
