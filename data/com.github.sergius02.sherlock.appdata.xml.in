@@ -62,6 +62,15 @@
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
   <releases>
+    <release version="1.2.0" date="2020-12-04">
+      <description>
+        <p>Sherlock 1.2.0</p>
+        <ul>
+          <li>Latitude and longitude can now been opened in OpenStreetMap</li>
+          <li>Sherlock now can works from terminal!, just type com.github.sergius02.sherlock -h for help</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.1" date="2020-10-06"/>
     <release version="1.0.0" date="2020-01-01"/>
   </releases>
