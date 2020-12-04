@@ -6,6 +6,7 @@ public class Sherlock.HTTPRequestHelper {
     private string base_url = "http://ip-api.com/json/";
     public string result;
     private Json.Node root;
+    private uint response_code;
 
     /**
     Send a request to the API
@@ -16,31 +17,42 @@ public class Sherlock.HTTPRequestHelper {
         var session = new Soup.Session ();
         var message = new Soup.Message ("GET", this.base_url + ip);
 
-        session.send_message (message);
+        this.response_code = session.send_message (message);
+
+        var parser = new Json.Parser ();
+        Json.Object root_object = null;
 
         result = "";
         for (int i = 0; i < message.response_body.length; i++) {
             this.result += ((char)message.response_body.data[i]).to_string ();
         }
 
-        var parser = new Json.Parser ();
         try {
+            if (result == "") {
+                result = "{}";
+            }
+
             parser.load_from_data (this.result, -1);
+
+            root = parser.get_root ();
+            root_object = root.get_object ();
         } catch (GLib.Error e) {
             stderr.printf (_("Error parsing JSON"));
         }
 
-        root = parser.get_root ();
-        Json.Object root_object = root.get_object ();
-        return new Sherlock.ResponseObject (root_object);
+        return new Sherlock.ResponseObject (root_object, response_code);
     }
 
     public string get_result () {
-        Json.Generator generator = new Json.Generator ();
-        generator.set_root (root);
+        if (this.response_code == 200) {
+            Json.Generator generator = new Json.Generator ();
+            generator.set_root (root);
 
-        generator.pretty = true;
-        return generator.to_data (null);
+            generator.pretty = true;
+            return generator.to_data (null);
+        } else {
+            return @"{\"status\":\"Error code: $response_code\"}";
+        }
     }
 
 }

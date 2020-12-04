@@ -2,6 +2,9 @@ public abstract class Sherlock.Box : Gtk.Box {
 
     protected Sherlock.Application application;
 
+    protected Gtk.Label label_status_error;
+    protected Gtk.Revealer revealer_status_error;
+
     protected Gtk.Label label_ip;
     protected Gtk.Label label_address;
     protected Gtk.Label label_timezone;
@@ -25,6 +28,9 @@ public abstract class Sherlock.Box : Gtk.Box {
     protected Gtk.Revealer revealer_json;
 
     protected void init_ui (string stack_prefix) {
+        this.label_status_error = this.application.builder.get_object ("labelStatusError") as Gtk.Label;
+        this.revealer_status_error = this.application.builder.get_object ("revealerStatusError") as Gtk.Revealer;
+
         this.label_address = this.application.builder.get_object (stack_prefix + "_LabelAddress") as Gtk.Label;
         this.label_timezone = this.application.builder.get_object (stack_prefix + "_LabelTimezone") as Gtk.Label;
         this.label_lat_long = this.application.builder.get_object (stack_prefix + "_LabelLatLong") as Gtk.Label;
@@ -75,24 +81,30 @@ public abstract class Sherlock.Box : Gtk.Box {
         var http_request_helper = new HTTPRequestHelper ();
         var response = http_request_helper.generate_http_request (text);
 
-        if (text == "") {
-            this.label_ip.set_text (response.query);
+        if (response.response_code == 200) {
+            this.revealer_status_error.reveal_child = false;
+            if (text == "") {
+                this.label_ip.set_text (response.query);
+            }
+
+            this.label_address.set_text (
+                response.zip + " " +
+                response.city + ", " +
+                response.region_name + ", " +
+                response.country
+            );
+            this.label_timezone.set_text (response.timezone);
+            this.label_lat_long.set_text (response.lat + ", " + response.lon);
+            this.label_isp.set_text (response.org + ", " + response.isp);
+            this.label_as.set_text (response.as);
+
+            this.label_json_output.set_text (http_request_helper.get_result ());
+
+            this.button_openmap.uri = "https://www.openstreetmap.org/#map=15/" + response.lat + "/" + response.lon;
+        } else {
+            this.revealer_status_error.reveal_child = true;
+            this.label_status_error.set_text (response.status);
         }
-
-        this.label_address.set_text (
-            response.zip + " " +
-            response.city + ", " +
-            response.region_name + ", " +
-            response.country
-        );
-        this.label_timezone.set_text (response.timezone);
-        this.label_lat_long.set_text (response.lat + ", " + response.lon);
-        this.label_isp.set_text (response.org + ", " + response.isp);
-        this.label_as.set_text (response.as);
-
-        this.label_json_output.set_text (http_request_helper.get_result ());
-
-        this.button_openmap.uri = "https://www.openstreetmap.org/#map=15/" + response.lat + "/" + response.lon;
     }
 
 }
