@@ -25,11 +25,19 @@
   <screenshots>
     <screenshot type="default">
       <caption>Normal variant</caption>
-      <image>https://github.com/sergius02/Sherlock/raw/master/screenshots/Sherlock.png</image>
+      <image>https://raw.githubusercontent.com/sergius02/Sherlock/master/screenshots/sherlock.png</image>
     </screenshot>
     <screenshot>
       <caption>Normal variant</caption>
-      <image>https://github.com/sergius02/Sherlock/raw/master/screenshots/Sherlock2.png</image>
+      <image>https://raw.githubusercontent.com/sergius02/Sherlock/master/screenshots/sherlock2.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Normal variant</caption>
+      <image>https://raw.githubusercontent.com/sergius02/Sherlock/master/screenshots/sherlock3.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Normal variant</caption>
+      <image>https://raw.githubusercontent.com/sergius02/Sherlock/master/screenshots/sherlock4.png</image>
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1">
