@@ -35,7 +35,10 @@ Ensure you have these dependencies installed
 sudo apt install elementary-sdk
 
 # FOR THE REST
-sudo apt install cmake libgtk-3-dev gettext libjson-glib-dev libsoup2.4-dev
+sudo apt install cmake libgtk-3-dev gettext
+
+# Dependencies
+sudo apt install libjson-glib-dev libsoup2.4-dev
 
 # clone repository
 git clone https://github.com/sergius02/Sherlock Sherlock
