@@ -25,11 +25,19 @@
   <screenshots>
     <screenshot type="default">
       <caption>Normal variant</caption>
-      <image>https://github.com/sergius02/Sherlock/raw/master/screenshots/Sherlock.png</image>
+      <image>https://raw.githubusercontent.com/sergius02/Sherlock/master/screenshots/sherlock.png</image>
     </screenshot>
     <screenshot>
       <caption>Normal variant</caption>
-      <image>https://github.com/sergius02/Sherlock/raw/master/screenshots/Sherlock2.png</image>
+      <image>https://raw.githubusercontent.com/sergius02/Sherlock/master/screenshots/sherlock2.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Normal variant</caption>
+      <image>https://raw.githubusercontent.com/sergius02/Sherlock/master/screenshots/sherlock3.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Normal variant</caption>
+      <image>https://raw.githubusercontent.com/sergius02/Sherlock/master/screenshots/sherlock4.png</image>
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1">
@@ -62,6 +70,15 @@
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
   <releases>
+    <release version="1.2.0" date="2020-12-04">
+      <description>
+        <p>Sherlock 1.2.0</p>
+        <ul>
+          <li>Latitude and longitude can now been opened in OpenStreetMap</li>
+          <li>Sherlock now can works from terminal!, just type com.github.sergius02.sherlock -h for help</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.1" date="2020-10-06"/>
     <release version="1.0.0" date="2020-01-01"/>
   </releases>

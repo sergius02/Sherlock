@@ -8,8 +8,9 @@
 ![Build Status](https://img.shields.io/travis/sergius02/Sherlock/master?style=for-the-badge)
 ![License](https://img.shields.io/github/license/sergius02/Sherlock?style=for-the-badge)
 
-|![alt](screenshots/Sherlock.png) |![alt](screenshots/Sherlock2.png)|
-|---------------------|---------------------|
+|![alt](screenshots/sherlock.png) |![alt](screenshots/sherlock2.png)|
+|---------------------------------|---------------------------------|
+|![alt](screenshots/sherlock3.png)|![alt](screenshots/sherlock4.png)|
 
 <p align="center">
   <a href="https://appcenter.elementary.io/com.github.sergius02.sherlock"><img src="https://appcenter.elementary.io/badge.svg" alt="Get it on AppCenter" /></a>
@@ -34,7 +35,10 @@ Ensure you have these dependencies installed
 sudo apt install elementary-sdk
 
 # FOR THE REST
-sudo apt install cmake libgtk-3-dev gettext libjson-glib-dev libsoup2.4-dev
+sudo apt install cmake libgtk-3-dev gettext
+
+# Dependencies
+sudo apt install libjson-glib-dev libsoup2.4-dev
 
 # clone repository
 git clone https://github.com/sergius02/Sherlock Sherlock
@@ -63,7 +67,6 @@ sudo ninja install
 * App icon from [Flaticon](https://www.flaticon.es/)
 
 ----------
-This is my first Vala application, be gentle 😹️
 
 If you like my work you can
 
